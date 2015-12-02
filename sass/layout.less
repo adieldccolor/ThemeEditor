@@ -1,0 +1,148 @@
+.border-radius(@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+@baseColor: #5856D6; /* blue color scheme */
+
+@mainMenuColor: @baseColor;
+@mainMenuColor_hover: @baseColor_darkenVariation;
+
+@h1_color: @baseColor;
+@h2_color: desaturate(darken(@baseColor, 10%), 30%);
+@h3_color:desaturate(darken(@baseColor, 5%), 20%);
+
+@masthead_bg: desaturate(darken(@baseColor, 10%), 40%);
+@subnav_bg: desaturate(darken(@baseColor, 30%), 40%);
+
+@baseColor_darkenVariation: desaturate(darken(@baseColor, 10%), 40%);
+
+
+
+
+.__theme-builder{
+
+    .__default-palette{
+
+        .__basic-editor{
+
+            .__color-palette{
+
+                .__selected-color-scheme{
+
+                    .__scheme-color{
+
+                        &.__color1{
+                            background-color: desaturate(darken(@baseColor, 5%), 10%);
+                        }
+                        &.__color2{
+                            background-color: desaturate(darken(@baseColor, 10%), 20%);
+                        }
+                        &.__color3{
+                            background-color: desaturate(darken(@baseColor, 15%), 30%);
+                        }
+                        &.__color4{
+                            background-color: desaturate(darken(@baseColor, 20%), 40%);
+                        }
+                        &.__color5{
+                            background-color: desaturate(darken(@baseColor, 30%), 40%);
+                        }
+
+                    }
+                }
+
+                .__divider{
+                    border-top: 1px solid #f2f2f2;
+                    margin: 10px 10px 0;
+                }
+
+            }
+
+
+
+            .__template-preview{
+
+                .__template-wrapper{
+
+
+                    .__template-body{
+
+                        a{
+                            color: @baseColor;
+                            &:hover, &focus, &:active{
+                                color: darken(@baseColor, 5%);
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .__template-header{
+                            .__menu{
+                                ul{
+                                    li{
+                                        a{
+                                            color: @mainMenuColor;
+                                            &:hover, &:focus{
+                                                color: @mainMenuColor_hover;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .__template-masthead{
+                            background-color: @masthead_bg;
+                        }
+
+                        .__template-page{
+                            padding: 20px 0 40px;
+                            color: #c8c8c8;
+
+                            h1{
+                                color: @h1_color;
+                            }
+
+                            h2{
+                                color: @h2_color;
+                            }
+
+                            h3{
+                                color: @h3_color;
+                            }
+
+                        }
+
+                        .__container{
+                            max-width: 600px;
+                            margin: 0 auto;
+                            padding: 0 15px;
+                        }
+
+                        .__template-footer{
+                            background-color: @baseColor_darkenVariation;
+                            color: #fff;
+                            padding: 15px 0;
+                        }
+                    }
+
+                    &.__previewing{
+                        .__template-body{
+                            opacity: 1;
+                        }
+
+                        .__template-preview-copy{
+                            display: none;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+
+
+}

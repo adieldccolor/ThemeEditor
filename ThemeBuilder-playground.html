@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="txt/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme Builder</title>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300'>
+    <style>*{
+        margin: 0;
+        padding: 0;}</style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="body">
+
+    <div class="__theme-builder __iframe">
+
+        <div class="__default-palette">
+
+            <div class="__basic-editor">
+
+
+
+                <div class="__template-preview">
+                    <div class="__template-wrapper __previewing">
+
+                        <div class="__template-preview-copy">
+                            Enable color scheme preview in template simulation
+                            <span class="__switch">
+                                <label for="lp-toggle"></label>
+                                <input type="checkbox" name="lp-toggle" id="lp-toggle" class="enable-switch" />
+                                <span class="__switch-background"></span>
+                                <span class="__switch-foreground">
+                                    <span class="__switch-checked">on</span>
+                                    <span class="__switch-unchecked">off</span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="__template-body">
+                            <div class="__template-header">
+                                <div class="__container">
+                                    LOGO
+
+                                    <div class="__menu">
+                                        <ul>
+                                            <li><a href="javascript:;">Home</a></li>
+                                            <li><a href="javascript:;">Apply Now</a></li>
+                                            <li><a href="javascript:;">Loan Programs</a></li>
+                                            <li><a href="javascript:;">Resources</a></li>
+                                            <li><a href="javascript:;">About Us</a></li>
+                                            <li><a href="javascript:;">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="__template-masthead">
+                                <div class="__container">
+                                    PAGE TITLE
+                                </div>
+                            </div>
+                            <div class="__template-page">
+                                <div class="__container">
+                                    <h1>Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aut consectetur ducimus, explicabo fuga fugit ipsam iste molestiae molestias,
+                                        necessitatibus non nostrum nulla quia quisquam recusandae saepe sequi ut, velit voluptas?</p>
+
+                                    <h2>Sub title</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aut consectetur ducimus, explicabo fuga fugit ipsam iste molestiae molestias,
+                                        necessitatibus non nostrum nulla quia quisquam recusandae saepe sequi ut, velit voluptas?</p>
+
+                                    <h3>Sub topic</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aut consectetur ducimus, explicabo fuga fugit ipsam iste molestiae molestias,
+                                        necessitatibus non nostrum nulla quia quisquam recusandae saepe sequi ut, velit voluptas?</p>
+                                    <p>
+                                        <a href="javascript:;">Page Link</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="__template-footer">
+                                <div class="__container">
+                                    EllieMae Inc. &copy; 2015.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet/less" href="sass/template.less">
+<script>
+    less = {
+        env: "development",
+        async: false,
+        fileAsync: false
+    };
+</script>
+<script src="js/less.js"></script>
+<!-- Core libraries -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/theme-builder.js"></script>
+<script src="js/helpers.js"></script>
+<script>
+    window.onload = function(){
+        $('.__theme-builder').addClass('__loaded');
+    };
+</script>
+
+</body>
+</html>

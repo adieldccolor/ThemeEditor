@@ -1,0 +1,29 @@
+{
+	"status": "Ok"
+	, "menu": [
+		[
+			{
+				"title": "EDIT MENU",
+				"url": "settings/menu"
+			},
+			{
+			"title": "preview",
+			"url": "settings/preview"
+			},
+			{
+			"title": "save",
+			"url": "settings"
+			}
+		], [
+			{
+				"title": "QA",
+				"hint": "Deploy to QA server"
+			}, {
+				"title": "Production",
+				"hint": "Deploy to Production"
+			}
+		]
+	], "dependencies": [
+
+		]
+}

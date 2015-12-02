@@ -1,0 +1,68 @@
+/* blue color scheme */
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__selected-color-scheme .__scheme-color.__color1 {
+  background-color: #4f4dc5;
+}
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__selected-color-scheme .__scheme-color.__color2 {
+  background-color: #4b4aaf;
+}
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__selected-color-scheme .__scheme-color.__color3 {
+  background-color: #4e4d92;
+}
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__selected-color-scheme .__scheme-color.__color4 {
+  background-color: #4f4e78;
+}
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__selected-color-scheme .__scheme-color.__color5 {
+  background-color: #3b3a59;
+}
+.__theme-builder .__default-palette .__basic-editor .__color-palette .__divider {
+  border-top: 1px solid #f2f2f2;
+  margin: 10px 10px 0;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body a {
+  color: #5856d6;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body a:hover,
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body afocus,
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body a:active {
+  color: #4441d1;
+  text-decoration: underline;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-header .__menu ul li a {
+  color: #5856d6;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-header .__menu ul li a:hover,
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-header .__menu ul li a:focus {
+  color: #636297;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-masthead {
+  background-color: #636297;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-page {
+  padding: 20px 0 40px;
+  color: #c8c8c8;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-page h1 {
+  color: #5856d6;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-page h2 {
+  color: #5756a3;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-page h3 {
+  color: #5b59b9;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper .__template-body .__template-footer {
+  background-color: #636297;
+  color: #fff;
+  padding: 15px 0;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper.__previewing .__template-body {
+  opacity: 1;
+}
+.__theme-builder .__default-palette .__basic-editor .__template-preview .__template-wrapper.__previewing .__template-preview-copy {
+  display: none;
+}
