@@ -2,8 +2,8 @@
     "id": "",
     "filetype": "text/css",
     "stylefile": "sass/layout.less",
-    "advanced": true,
-    "baseColor": "#0F0",
+    "advanced": false,
+    "baseColor": "#FFCC00",
     "variables": [
         {
             "name": "Main Menu Color",

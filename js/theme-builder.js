@@ -122,6 +122,8 @@ function createSchemeGraphics(vars){
 
     var hasBase = false;
     var baseColor = "#000";
+    var usedColors = [];
+
     vars.each(function(v){
         var value = v.value;
 
@@ -134,9 +136,19 @@ function createSchemeGraphics(vars){
         var $item = $scheme.find('.__scheme-color[data-color="'+ v.key.slice(1)+'"]');
         if( $item.length ){
             $item.css({ backgroundColor: value }).addClass('found');
+
+            if( usedColors.indexOf(value) > -1 ){
+                $item.remove();
+            }
         }else{
-            listHTML += '<div class="__scheme-color" style="background-color: '
-                + value+'; box-shadow: 0 0 0 '+value+';" title="' + v.key + ' - '+ value+'" data-color="'+ v.key.slice(1)+'"></div>';
+            if( usedColors.indexOf(value) < 0 ){
+                listHTML += '<div class="__scheme-color" style="background-color: '
+                    + value+';" title="'+ value+'" data-colorValue="'+value+'" data-color="'+ v.key.slice(1)+'"></div>';
+            }
+        }
+
+        if( usedColors.indexOf(value) < 0 ){
+            usedColors.push(value);
         }
     });
 
@@ -147,9 +159,15 @@ function createSchemeGraphics(vars){
         var $item = $scheme.find('.__scheme-color[data-color="baseColor"]');
         if( $item.length ){
             $item.css({ backgroundColor: value }).addClass('found');
+
+            if( usedColors.indexOf(baseColor) > -1 ){
+                $item.remove();
+            }
         }else{
-            listHTML += '<div class="__scheme-color" style="background-color: '
-                + value +'; box-shadow: 0 0 0 '+value+';" title="@baseColor - '+ value+'" data-color="'+ v.key.slice(1)+'"></div>';
+            if( usedColors.indexOf(baseColor) < 0 ){
+                listHTML += '<div class="__scheme-color" style="background-color: '
+                    + value +';" title="'+ value+'" data-colorValue="'+value+'" data-color="'+ v.key.slice(1)+'"></div>';
+            }
         }
     }
 
@@ -159,12 +177,23 @@ function createSchemeGraphics(vars){
         $scheme.find('.__scheme-color').not('.found').remove();
         $scheme.append(listHTML);
 
-        var total = vars.length + (!hasBase ? 1 : 0);
-        var schemeWidth = $scheme.outerWidth();
-        var singleWidth = schemeWidth / total;
+        $scheme.find('.__scheme-color').each(function(){
+            var c = $(this).attr('data-colorValue');
+            $(this).siblings('[data-colorValue="'+c+'"]').remove();
+        });
 
-        $scheme.find('.__scheme-color').css({ width: singleWidth });
-        $scheme.removeClass('loading');
+        //var total = vars.length + (!hasBase ? 1 : 0);
+        var total = $scheme.find('.__scheme-color').length;
+
+        var schemeWidth = $('.__color-palette > div:visible').first().outerWidth();
+        var singleWidth = schemeWidth / total;
+        var singleHeight = ( singleWidth > 20 ? 20 : (singleWidth < 10 ? 10 : singleWidth) );
+
+        $scheme.find('.__scheme-color').css({ width: singleWidth,
+            height: singleHeight });
+        $scheme.removeClass('loading').css({ height: singleHeight });
+
+        $('.__selected-color').css({ borderColor: lighten(baseColor, 15) });
     }, 100, 'grpahics');
 
     return vars;
@@ -418,6 +447,7 @@ function Variable(opts){
     this.name = "";
     this.key = "";
     this.value = "";
+    this.originalValue = "";
     this.v = [];
 
     this.setCurrent = function(obj){
@@ -426,6 +456,7 @@ function Variable(opts){
         this.name = obj.name;
         this.key = obj.key;
         this.value = obj.value;
+        this.originalValue = obj.originalValue;
 
         return this;
     };
